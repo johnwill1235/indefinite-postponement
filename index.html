@@ -120,16 +120,25 @@
             background: #555;
         }
         */
+        
+        /* Example of a subtle gradient for the hero background */
+        .hero-gradient {
+            background: linear-gradient(135deg, #54CDE4 0%, #2C3334 100%);
+        }
     </style>
 </head>
 <body class="font-sans text-gunmetal-500 bg-platinum-900">
 
     <!-- Hero Section -->
-    <header class="py-20 flex flex-col items-center justify-center bg-platinum-100 text-white">
+    <header class="hero-gradient py-24 flex flex-col items-center justify-center relative">
+        <!-- Decorative Abstract Shapes -->
+        <div class="absolute top-0 left-0 w-32 h-32 bg-yellow-500 rounded-full opacity-30 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-48 h-48 bg-sky-blue-500 rounded-full opacity-20 transform translate-x-1/2 translate-y-1/2"></div>
+        
         <div class="relative z-10 text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-down">Indefinite Postponement</h1>
-            <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">A Case Study of Adolescent Suicidality</p>
-            <a href="#buy" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition transform hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="400">Buy Now</a>
+            <h1 class="text-white text-5xl md:text-7xl font-bold mb-4" data-aos="fade-down">Indefinite Postponement</h1>
+            <p class="text-sky-blue-200 text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">A Case Study of Adolescent Suicidality</p>
+            <a href="#about-book" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition transform hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="400">Learn More</a>
         </div>
     </header>
 
@@ -141,7 +150,10 @@
                 <div class="md:w-2/3">
                     <h2 class="text-3xl text-sky-blue-500 font-semibold mb-4">About the Book</h2>
                     <p class="text-lg leading-relaxed text-gunmetal-700">
-                        INDEFINITE POSTPONEMENT combines the suicide-recovery diary of a patient named Grace with the commentary of the psychiatrist John Williams and presents a unique case study of a young woman who descended into illness and found her way back.
+                        <strong>INDEFINITE POSTPONEMENT</strong> combines the suicide-recovery diary of a patient named Grace with the commentary of the psychiatrist John Williams and presents a unique case study of a young woman who descended into illness and found her way back.
+                    </p>
+                    <p class="mt-4 text-lg leading-relaxed text-gunmetal-700">
+                        Through candid storytelling and professional insights, this book delves deep into the complexities of adolescent mental health, offering hope and understanding to those affected by suicidality.
                     </p>
                 </div>
             </div>
@@ -235,7 +247,7 @@
     <section class="py-16 bg-sky-blue-500 text-white" id="buy">
         <div class="container mx-auto px-4 text-center" data-aos="fade-up">
             <h2 class="text-3xl md:text-4xl font-semibold mb-6">Ready to Read?</h2>
-            <a href="https://7byqan2b9sy.typeform.com/to/EzZbYVvO" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1">Buy Now</a>
+            <a href="https://www.example.com/buy" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1">Buy Now</a>
         </div>
     </section>
 
