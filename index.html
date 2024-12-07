@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indefinite Postponement</title>
+    
+    <!-- Metadata for SEO -->
+    <meta name="description" content="Indefinite Postponement: A Case Study of Adolescent Suicidality by John P. Williams, MD. Explore Grace's journey through illness and recovery with expert insights.">
+    <meta name="keywords" content="Indefinite Postponement, Adolescent Suicidality, Mental Health, Suicide Recovery, John P. Williams, MD, Literary Nonfiction">
+    
+    <!-- Open Graph Metadata for Social Media Sharing -->
+    <meta property="og:title" content="Indefinite Postponement">
+    <meta property="og:description" content="A Case Study of Adolescent Suicidality by John P. Williams, MD.">
+    <meta property="og:image" content="https://your-username.github.io/indefinite-postponement/images/book-cover.jpg">
+    <meta property="og:url" content="https://your-username.github.io/indefinite-postponement/">
+    <meta property="og:type" content="website">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- AOS Library CSS -->
+    
+    <!-- AOS Library CSS for Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Tailwind CSS CDN with Custom Configuration -->
     <script>
         // Tailwind CSS Configuration
-        window.tailwind = {
+        tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        white: {
-                            DEFAULT: '#FFFFFF',
-                            100: '#333333',
-                            200: '#666666',
-                            300: '#999999',
-                            400: '#CCCCCC',
-                            500: '#FFFFFF',
-                            600: '#FFFFFF',
-                            700: '#FFFFFF',
-                            800: '#FFFFFF',
-                            900: '#FFFFFF',
-                        },
                         platinum: {
                             DEFAULT: '#E3E8E4',
                             100: '#29322b',
@@ -51,7 +53,7 @@
                             800: '#a6b1b3',
                             900: '#d2d8d9',
                         },
-                        sky_blue: {
+                        'sky-blue': {
                             DEFAULT: '#54CDE4',
                             100: '#082e36',
                             200: '#115d6c',
@@ -63,7 +65,7 @@
                             800: '#baebf4',
                             900: '#ddf5fa',
                         },
-                        battleship_gray: {
+                        'battleship-gray': {
                             DEFAULT: '#929693',
                             100: '#1d1e1d',
                             200: '#3a3c3b',
@@ -74,18 +76,6 @@
                             700: '#bdc0be',
                             800: '#d3d5d4',
                             900: '#e9eae9',
-                        },
-                        black: {
-                            DEFAULT: '#000000',
-                            100: '#000000',
-                            200: '#000000',
-                            300: '#000000',
-                            400: '#000000',
-                            500: '#000000',
-                            600: '#333333',
-                            700: '#666666',
-                            800: '#999999',
-                            900: '#CCCCCC',
                         },
                         yellow: {
                             DEFAULT: '#FEFB1E',
@@ -108,13 +98,15 @@
             plugins: [],
         }
     </script>
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Custom Styles (Optional) -->
     <style>
         /* Custom scrollbar for better aesthetics (optional) */
-        /* Example: */
-        /* ::-webkit-scrollbar {
+        /* Example:
+        ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
@@ -126,7 +118,8 @@
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
-        } */
+        }
+        */
     </style>
 </head>
 <body class="font-sans text-gunmetal-500 bg-platinum-900">
@@ -160,10 +153,15 @@
     <section class="py-16 bg-white" id="about-author">
         <div class="container mx-auto px-4" data-aos="fade-up">
             <h2 class="text-3xl text-gunmetal-500 font-semibold mb-8 text-center">About the Author</h2>
-            <div class="max-w-3xl mx-auto bg-platinum-100 rounded-xl shadow-lg p-8">
-                <p class="text-lg leading-relaxed text-gunmetal-700">
-                    John P. Williams, MD is a child, adolescent, and adult psychiatrist, and a psychotherapist in private practice in the Philadelphia area.
-                </p>
+            <div class="max-w-4xl mx-auto bg-platinum-100 rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center">
+                <a href="images/author.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="images/author.jpg" alt="John P. Williams, MD" class="w-40 h-40 rounded-full shadow-md mb-6 md:mb-0 md:mr-8 object-cover">
+                </a>
+                <div>
+                    <p class="text-lg leading-relaxed text-gunmetal-700">
+                        John P. Williams, MD is a child, adolescent, and adult psychiatrist, and a psychotherapist in private practice in the Philadelphia area. With years of experience in mental health, Dr. Williams brings a compassionate and insightful perspective to the complexities of adolescent suicidality, as showcased in his book, "Indefinite Postponement."
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -198,6 +196,7 @@
                         This book sheds much-needed light on the epidemic of suicide--the incidence of which has risen sharply even as physical illnesses such as cancer have become less frequent. Through clear, candid prose, Dr. Williams details his treatment plan with one of his most challenging patients, a high school student who came to him after nine months of contemplating suicide, and whom he gingerly convinces to put off her plans. An excellent read for anyone whose life has touched suicide, as survivor, therapist, friend or relative.
                     </p>
                 </div>
+                
                 <!-- Review 2 -->
                 <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-up" data-aos-delay="400">
                     <h3 class="text-xl text-gunmetal-500 font-semibold mb-2">Maudie White</h3>
@@ -224,8 +223,7 @@
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Buy Section -->
     <section class="py-16 bg-sky-blue-500 text-white" id="buy">
