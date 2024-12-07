@@ -104,23 +104,6 @@
     
     <!-- Custom Styles (Optional) -->
     <style>
-        /* Custom scrollbar for better aesthetics (optional) */
-        /* Example:
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        */
-        
         /* Example of a subtle gradient for the hero background */
         .hero-gradient {
             background: linear-gradient(135deg, #54CDE4 0%, #2C3334 100%);
@@ -136,9 +119,8 @@
         <div class="absolute bottom-0 right-0 w-48 h-48 bg-sky-blue-500 rounded-full opacity-20 transform translate-x-1/2 translate-y-1/2"></div>
         
         <div class="relative z-10 text-center px-4">
-            <h1 class="text-white text-5xl md:text-7xl font-bold mb-4" data-aos="fade-down">Indefinite Postponement</h1>
-            <p class="text-sky-blue-200 text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">A Case Study of Adolescent Suicidality</p>
-            <a href="#about-book" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition transform hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="400">Learn More</a>
+            <h1 class="text-white text-4xl md:text-6xl font-bold mb-4" data-aos="fade-down">Indefinite Postponement<br>A Case Study of Adolescent Suicidality</h1>
+            <a href="#buy" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition transform hover:-translate-y-1 mt-4" data-aos="zoom-in" data-aos-delay="400">Buy Now</a>
         </div>
     </header>
 
@@ -146,11 +128,25 @@
     <section class="py-16 bg-platinum-900" id="about-book">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center" data-aos="fade-up">
-                <img src="images/book-cover.jpg" alt="Indefinite Postponement Book Cover" class="w-64 h-auto rounded-lg shadow-lg mb-8 md:mb-0 md:mr-12" loading="lazy">
+                <!-- Book Icon -->
+                <div class="flex-shrink-0 mb-8 md:mb-0 md:mr-12">
+                    <!-- You can replace the SVG below with any book icon you prefer -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-sky-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2z" />
+                    </svg>
+                </div>
+                <!-- Book Details -->
                 <div class="md:w-2/3">
-                    <h2 class="text-3xl text-sky-blue-500 font-semibold mb-4">About the Book</h2>
+                    <h2 class="text-3xl text-sky-blue-500 font-semibold mb-4 flex items-center">
+                        <!-- Optional: Add a small icon next to the heading -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-sky-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.978 9.978 0 01-5.196-1.604M3 12a9.978 9.978 0 015.196-1.604M3 12a9.978 9.978 0 015.196-1.604M21 12a9.978 9.978 0 00-5.196-1.604" />
+                        </svg>
+                        About the Book
+                    </h2>
                     <p class="text-lg leading-relaxed text-gunmetal-700">
-                        <strong>INDEFINITE POSTPONEMENT</strong> combines the suicide-recovery diary of a patient named Grace with the commentary of the psychiatrist John Williams and presents a unique case study of a young woman who descended into illness and found her way back.
+                        <strong>INDefinite Postponement</strong> combines the suicide-recovery diary of a patient named Grace with the commentary of the psychiatrist John Williams and presents a unique case study of a young woman who descended into illness and found her way back.
                     </p>
                     <p class="mt-4 text-lg leading-relaxed text-gunmetal-700">
                         Through candid storytelling and professional insights, this book delves deep into the complexities of adolescent mental health, offering hope and understanding to those affected by suicidality.
@@ -208,6 +204,9 @@
                         <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
                         </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
                     </div>
                     <p class="text-gray-700">
                         This book sheds much-needed light on the epidemic of suicide--the incidence of which has risen sharply even as physical illnesses such as cancer have become less frequent. Through clear, candid prose, Dr. Williams details his treatment plan with one of his most challenging patients, a high school student who came to him after nine months of contemplating suicide, and whom he gingerly convinces to put off her plans. An excellent read for anyone whose life has touched suicide, as survivor, therapist, friend or relative.
@@ -247,7 +246,7 @@
     <section class="py-16 bg-sky-blue-500 text-white" id="buy">
         <div class="container mx-auto px-4 text-center" data-aos="fade-up">
             <h2 class="text-3xl md:text-4xl font-semibold mb-6">Ready to Read?</h2>
-            <a href="https://www.example.com/buy" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1">Buy Now</a>
+            <a href="https://7byqan2b9sy.typeform.com/to/EzZbYVvO" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1">Buy Now</a>
         </div>
     </section>
 
