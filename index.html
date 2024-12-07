@@ -4,65 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indefinite Postponement</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts for sleek typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN with Custom Configuration -->
+    <script>
+        // Tailwind CSS Configuration
+        window.tailwind = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: {
+                            DEFAULT: '#FFFFFF',
+                            100: '#333333',
+                            200: '#666666',
+                            300: '#999999',
+                            400: '#CCCCCC',
+                            500: '#FFFFFF',
+                            600: '#FFFFFF',
+                            700: '#FFFFFF',
+                            800: '#FFFFFF',
+                            900: '#FFFFFF',
+                        },
+                        platinum: {
+                            DEFAULT: '#E3E8E4',
+                            100: '#29322b',
+                            200: '#536556',
+                            300: '#7e9583',
+                            400: '#b0bfb3',
+                            500: '#e3e8e4',
+                            600: '#e9ede9',
+                            700: '#eef1ef',
+                            800: '#f4f6f4',
+                            900: '#f9fafa',
+                        },
+                        gunmetal: {
+                            DEFAULT: '#2C3334',
+                            100: '#090a0a',
+                            200: '#121515',
+                            300: '#1b1f1f',
+                            400: '#24292a',
+                            500: '#2c3334',
+                            600: '#535f61',
+                            700: '#798b8d',
+                            800: '#a6b1b3',
+                            900: '#d2d8d9',
+                        },
+                        sky_blue: {
+                            DEFAULT: '#54CDE4',
+                            100: '#082e36',
+                            200: '#115d6c',
+                            300: '#198ba1',
+                            400: '#22b9d7',
+                            500: '#54cde4',
+                            600: '#75d6ea',
+                            700: '#98e0ef',
+                            800: '#baebf4',
+                            900: '#ddf5fa',
+                        },
+                        battleship_gray: {
+                            DEFAULT: '#929693',
+                            100: '#1d1e1d',
+                            200: '#3a3c3b',
+                            300: '#575b58',
+                            400: '#747975',
+                            500: '#929693',
+                            600: '#a8aba8',
+                            700: '#bdc0be',
+                            800: '#d3d5d4',
+                            900: '#e9eae9',
+                        },
+                        black: {
+                            DEFAULT: '#000000',
+                            100: '#000000',
+                            200: '#000000',
+                            300: '#000000',
+                            400: '#000000',
+                            500: '#000000',
+                            600: '#333333',
+                            700: '#666666',
+                            800: '#999999',
+                            900: '#CCCCCC',
+                        },
+                        yellow: {
+                            DEFAULT: '#FEFB1E',
+                            100: '#393800',
+                            200: '#727001',
+                            300: '#ABA801',
+                            400: '#E3E001',
+                            500: '#FEFB1E',
+                            600: '#FEFB4C',
+                            700: '#FEFC79',
+                            800: '#FFFDA6',
+                            900: '#FFFED2',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                },
+            },
+            plugins: [],
+        }
+    </script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles (Optional) -->
+    <style>
+        /* Custom scrollbar for better aesthetics (optional) */
+        /* Example: */
+        /* ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        } */
+    </style>
 </head>
-<body>
-    <header class="hero">
-        <div class="container">
-            <h1>Indefinite Postponement</h1>
-            <p>A Case Study of Adolescent Suicidality</p>
-            <a href="#buy" class="btn primary">Buy Now</a>
+<body class="font-sans text-gunmetal-500 bg-platinum-900">
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('images/book-cover.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-white text-4xl md:text-6xl font-bold mb-4" data-aos="fade-down">Indefinite Postponement</h1>
+            <p class="text-white text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">A Case Study of Adolescent Suicidality</p>
+            <a href="#buy" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition transform hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="400">Buy Now</a>
         </div>
     </header>
 
-    <section class="book-description">
-        <div class="container">
-            <img src="images/book-cover.jpg" alt="Indefinite Postponement Book Cover" class="book-cover">
-            <div class="description">
-                <h2>About the Book</h2>
-                <p>INDEFINITE POSTPONEMENT combines the suicide-recovery diary of a patient named Grace with the commentary of the psychiatrist John Williams and presents a unique case study of a young woman who descended into illness and found her way back.</p>
+    <!-- Book Description Section -->
+    <section class="py-16 bg-platinum-900" id="about-book">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <img src="images/book-cover.jpg" alt="Indefinite Postponement Book Cover" class="w-64 h-auto rounded-lg shadow-lg mb-8 md:mb-0 md:mr-12" loading="lazy">
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl text-sky-blue-500 font-semibold mb-4">About the Book</h2>
+                    <p class="text-lg leading-relaxed text-gunmetal-700">
+                        INDEFINITE POSTPONEMENT combines the suicide-recovery diary of a patient named Grace with the commentary of the psychiatrist John Williams and presents a unique case study of a young woman who descended into illness and found her way back.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="author">
-        <div class="container">
-            <h2>About the Author</h2>
-            <p>John P. Williams, MD is a child, adolescent, and adult psychiatrist, and a psychotherapist in private practice in the Philadelphia area.</p>
-        </div>
-    </section>
-
-    <section class="reviews">
-        <div class="container">
-            <h2>What Readers Are Saying</h2>
-            <div class="review">
-                <h3>Meredith Anne Phillips</h3>
-                <div class="rating">★★★★★</div>
-                <p class="date">Reviewed in the United States on February 10, 2018</p>
-                <p>This book sheds much-needed light on the epidemic of suicide--the incidence of which has risen sharply even as physical illnesses such as cancer have become less frequent. Through clear, candid prose, Dr. Williams details his treatment plan with one of his most challenging patients, a high school student who came to him after nine months of contemplating suicide, and whom he gingerly convinces to put off her plans. One of the great things about this book is the way the author, a practicing adolescent psychiatrist in suburban Philadelphia, parries with the platitudes of modern psychiatry--the need to hospitalize, protect oneself from malpractice, medicate--while developing an empathetic relationship with the patient that ultimately proves to be more meaningful, and more successful. An excellent read for anyone whose life has touched suicide, as survivor, therapist, friend or relative.</p>
-            </div>
-            <div class="review">
-                <h3>Maudie White</h3>
-                <div class="rating">★★★★★</div>
-                <p class="date">Reviewed in the United States on February 8, 2018</p>
-                <p>This groundbreaking work captures the difficult journey through suicidality for both patient and doctor. Grace's ability to narrate her pain, followed by the doctor's insight, is riveting. Seeing the transformation in Grace through her writings while in recovery is the very essence of hope. This book shows how there is a path to recovery for anyone suffering and guidance to medical professionals.</p>
+    <!-- Author Section -->
+    <section class="py-16 bg-white" id="about-author">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="text-3xl text-gunmetal-500 font-semibold mb-8 text-center">About the Author</h2>
+            <div class="max-w-3xl mx-auto bg-platinum-100 rounded-xl shadow-lg p-8">
+                <p class="text-lg leading-relaxed text-gunmetal-700">
+                    John P. Williams, MD is a child, adolescent, and adult psychiatrist, and a psychotherapist in private practice in the Philadelphia area.
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="buy" class="buy-section">
-        <div class="container">
-            <h2>Ready to Read?</h2>
-            <a href="https://www.example.com/buy" class="btn secondary">Buy Now</a>
+    <!-- Reviews Section -->
+    <section class="py-16 bg-platinum-900" id="reviews">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl text-sky-blue-500 font-semibold mb-12 text-center" data-aos="fade-up">What Readers Are Saying</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl text-gunmetal-500 font-semibold mb-2">Meredith Anne Phillips</h3>
+                    <div class="flex items-center mb-2">
+                        <!-- Star Icons -->
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-700">
+                        This book sheds much-needed light on the epidemic of suicide--the incidence of which has risen sharply even as physical illnesses such as cancer have become less frequent. Through clear, candid prose, Dr. Williams details his treatment plan with one of his most challenging patients, a high school student who came to him after nine months of contemplating suicide, and whom he gingerly convinces to put off her plans. An excellent read for anyone whose life has touched suicide, as survivor, therapist, friend or relative.
+                    </p>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl text-gunmetal-500 font-semibold mb-2">Maudie White</h3>
+                    <div class="flex items-center mb-2">
+                        <!-- Star Icons -->
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.38 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.38-2.46a1 1 0 00-1.176 0l-3.38 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.98 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-700">
+                        This groundbreaking work captures the difficult journey through suicidality for both patient and doctor. Grace's ability to narrate her pain, followed by the doctor's insight, is riveting. Seeing the transformation in Grace through her writings while in recovery is the very essence of hope. This book shows how there is a path to recovery for anyone suffering and guidance to medical professionals.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 John P. Williams, MD. All rights reserved.</p>
+    <!-- Buy Section -->
+    <section class="py-16 bg-sky-blue-500 text-white" id="buy">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-semibold mb-6">Ready to Read?</h2>
+            <a href="https://www.example.com/buy" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1">Buy Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2024 John P. Williams, MD. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- AOS Library Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    </script>
 </body>
 </html>
